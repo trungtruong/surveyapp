@@ -2,4 +2,5 @@ READ ME
 
 TESTING COMMIT
 TESTING COMMTTING 2
-ashfuhaoufh 
+
+testing merging conflict
