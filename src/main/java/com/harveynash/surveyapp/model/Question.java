@@ -1,42 +1,61 @@
 package com.harveynash.surveyapp.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 @XmlRootElement(name = "question")
+@XmlAccessorType(XmlAccessType.NONE)
 public class Question {
-    int id;
-    String text;
-    QuestionType type = QuestionType.TEXT;
-    QuestionOption option = null;
+    
+    @XmlTransient
+    private int questionId;
     
     @XmlElement
+    private String questionText;
+    
+    @XmlElement
+    private QuestionType questionType = QuestionType.TEXT;
+    
+    @XmlElement
+    private QuestionOption questionOption = null;
+    
+    public int getQuestionId() {
+    
+        return questionId;
+    }
+
+    public void setQuestionId(int questionId) {
+    
+        this.questionId = questionId;
+    }
+
     public void setText(String text) {
-        this.text = text;
+        this.questionText = text;
     }
     
     public String getText () {
-        return text;
+        return questionText;
     }
     
-    @XmlElement
     public void setQuestionType(QuestionType type) {
 
-        this.type = type;
+        this.questionType = type;
     }
     
     public QuestionType getQuestionType() {
 
-        return type;
+        return questionType;
     }
     
-    @XmlElement
     public void setQuestionOption(QuestionOption option) {
 
-        this.option = option;
+        this.questionOption = option;
     }
     public QuestionOption getQuestionOption() {
 
-        return option;
+        return questionOption;
     }
 }
