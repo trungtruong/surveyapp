@@ -2,6 +2,7 @@ package com.harveynash.surveyapp.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.sql.Date;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -29,12 +30,14 @@ public class Survey {
     }
     public void setSurveyId(Integer surveyId) {
         this.surveyId = surveyId;
+    }
     
     public String getSurveyName() {
         return surveyName;
     }
     public void setSurveyName(String surveyName) {
         this.surveyName = surveyName;
+    }
     
     public List<Question> getQuestionList() {
     
@@ -44,6 +47,7 @@ public class Survey {
     public void setQuestionList(List<Question> questionList) {
     
     this.questionList = questionList;
+    }
     public Date getStartDate() {
         return startDate;
     }
