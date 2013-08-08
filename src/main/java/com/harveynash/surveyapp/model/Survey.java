@@ -22,7 +22,11 @@ public class Survey {
     
     @XmlElement
     private List<Question> questionList;
+    
+    @XmlElement
     private Date startDate;
+    
+    @XmlElement
     private Date endDate;
     
     public Integer getSurveyId() {
