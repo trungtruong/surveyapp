@@ -11,22 +11,19 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 @XmlRootElement (name = "survey")
-@XmlAccessorType(XmlAccessType.NONE)
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Survey {
     
     @XmlTransient
     private int surveyId;
-    
-    @XmlElement
+
     private String surveyName;
     
-    @XmlElement
+    @XmlElement(name ="question")
     private List<Question> questionList;
-    
-    @XmlElement
+
     private Date startDate;
-    
-    @XmlElement
+
     private Date endDate;
     
     public Integer getSurveyId() {

@@ -65,3 +65,4 @@ public class HomeController {
 	}
 
 }
+>>>>>>> branch 'master' of https://github.com/trungtruong/surveyapp.git

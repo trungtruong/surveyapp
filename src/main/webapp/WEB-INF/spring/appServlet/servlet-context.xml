@@ -28,3 +28,4 @@
 	<context:component-scan base-package="com.harveynash.surveyapp" />
 
 </beans:beans>
+>>>>>>> branch 'master' of https://github.com/trungtruong/surveyapp.git
