@@ -10,7 +10,7 @@
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
-<form action="surveyapp/xml/add" 
+<form action="xml/add" 
       method="post" 
       modelAttribute="questions"
       enctype="multipart/form-data"> <!-- for input type file -->

@@ -1,12 +1,9 @@
 package com.harveynash.surveyapp.controller;
 
-import java.io.File;
 import java.io.IOException;
 import java.security.Provider.Service;
 import java.text.DateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import java.util.Locale;
 
 import javax.xml.bind.JAXBContext;
@@ -21,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.harveynash.surveyapp.model.Question;
 import com.harveynash.surveyapp.model.Survey;
 
 /**
@@ -52,9 +48,9 @@ public class HomeController {
 	}
 	@RequestMapping(value = "/xml/add", method = RequestMethod.POST)
 	public String addXmlFromForm(@RequestParam(value="fileXml", required = false) MultipartFile files) {
+	    Survey survey = new Survey();
 	    try {
-            Survey survey;
-            JAXBContext context = JAXBContext.newInstance(Question.class);
+            JAXBContext context = JAXBContext.newInstance(Survey.class);
             survey = (Survey) context.createUnmarshaller().unmarshal(files.getInputStream());
         } catch (JAXBException e) {
             // TODO Auto-generated catch block
@@ -62,7 +58,7 @@ public class HomeController {
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
-
+            
         }
 	    
 	    return "redirect:/xml";
