@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import org.springframework.jdbc.core.RowMapper;
 
 import com.harveynash.surveyapp.model.Question;
+import com.harveynash.surveyapp.model.QuestionType;
 
 public class QuestionMapper implements RowMapper<Question> {
 
@@ -13,9 +14,8 @@ public class QuestionMapper implements RowMapper<Question> {
 	public Question mapRow(ResultSet rs, int rowNum) throws SQLException {
 		Question question = new Question();
 		question.setQuestionId(rs.getInt("questionId"));
-		question.setText(rs.getString("questionText"));
-		question.setQuestionType(rs.getString("Type"));
-		question.setQuestionOption(rs.getString("questionOption"));
+		question.setQuestionText(rs.getString("questionName"));
+		question.setQuestionType(QuestionType.valueOf(rs.getString("questionType")));
 		return question;
 	}
 
