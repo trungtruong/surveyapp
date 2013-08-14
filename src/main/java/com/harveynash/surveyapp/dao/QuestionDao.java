@@ -30,7 +30,7 @@ public interface QuestionDao {
 	    * This is the method to be used to list down
 	    * all the records from the Question table.
 	    */
-	   public List<Question> listUser();
+	   public List<Question> listQuestions(Integer surveyId);
 	   /** 
 	    * This is the method to be used to delete
 	    * a record from the Question table corresponding

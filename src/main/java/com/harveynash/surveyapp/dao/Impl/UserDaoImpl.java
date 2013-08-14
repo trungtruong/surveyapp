@@ -36,9 +36,9 @@ public class UserDaoImpl implements UserDao{
 	}
 
 	@Override
-	public List<User> listUser() {
-		String SQL = "select * from User_Survey";
-	      List <User> users = jdbcTemplateObject.query(SQL, 
+	public List<User> listUser(Integer surveyId) {
+		String SQL = "select * from User_Survey where surveyId = ?";
+	      List <User> users = jdbcTemplateObject.query(SQL, new Object[] {surveyId},
 	                                new UserMapper());
 	      return users;
 	}

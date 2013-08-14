@@ -43,9 +43,9 @@ public class QuestionDaoImpl implements QuestionDao{
 	}
 
 	@Override
-	public List<Question> listUser() {
-		String SQL = "select * from Question";
-	    List <Question> questions = jdbcTemplateObject.query(SQL, 
+	public List<Question> listQuestions(Integer surveyId) {
+		String SQL = "select * from Question where surveyId = ?";
+	    List <Question> questions = jdbcTemplateObject.query(SQL, new Object[] {surveyId},
 	                                new QuestionMapper());
 	    return questions;
 	}

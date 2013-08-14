@@ -28,7 +28,7 @@ public interface UserDao {
 	    * This is the method to be used to list down
 	    * all the records from the User table.
 	    */
-	   public List<User> listUser();
+	   public List<User> listUser(Integer surveyId);
 	   /** 
 	    * This is the method to be used to delete
 	    * a record from the User table corresponding
