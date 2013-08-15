@@ -21,8 +21,18 @@ public class Survey {
     
     @XmlElement(name ="question")
     private List<Question> questionList;
+    
+    @XmlElement(name ="user")
+    private List<User> userList;
 
-    private Date startDate;
+    public List<User> getUserList() {
+		return userList;
+	}
+	public void setUserList(List<User> userList) {
+		this.userList = userList;
+	}
+
+	private Date startDate;
 
     private Date endDate;
     
