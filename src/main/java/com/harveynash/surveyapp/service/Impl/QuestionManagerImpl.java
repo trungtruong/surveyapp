@@ -2,6 +2,7 @@ package com.harveynash.surveyapp.service.Impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.harveynash.surveyapp.dao.QuestionDao;
@@ -10,6 +11,8 @@ import com.harveynash.surveyapp.service.QuestionManager;
 
 @Service
 public class QuestionManagerImpl implements QuestionManager {
+    
+    @Autowired
 	private QuestionDao questionDao;
 
 	@Override

@@ -5,12 +5,13 @@ import java.util.List;
 import javax.sql.DataSource;
 
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import com.harveynash.surveyapp.dao.UserDao;
 import com.harveynash.surveyapp.mapper.UserMapper;
 import com.harveynash.surveyapp.model.User;
 
-
+@Repository
 public class UserDaoImpl implements UserDao{
 	private DataSource dataSource;
 	private JdbcTemplate jdbcTemplateObject;

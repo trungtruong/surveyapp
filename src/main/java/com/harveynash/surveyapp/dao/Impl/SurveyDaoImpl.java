@@ -6,11 +6,13 @@ import java.util.List;
 import javax.sql.DataSource;
 
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import com.harveynash.surveyapp.dao.SurveyDao;
 import com.harveynash.surveyapp.mapper.SurveyMapper;
 import com.harveynash.surveyapp.model.Survey;
 
+@Repository
 public class SurveyDaoImpl implements SurveyDao {
 	private DataSource dataSource;
 	private JdbcTemplate jdbcTemplateObject;

@@ -36,7 +36,13 @@ public class SurveyManagerController {
         return "surveyMngr";
     }
     
-    @RequestMapping(value = "/xml", method = RequestMethod.GET)
+    @RequestMapping(value = "/surveyMngr/addSurvey", method = RequestMethod.GET)
+    public String addSurvey(Model model) {
+        logger.info("adding survey");
+        return "addSurvey";
+    }
+    
+    @RequestMapping(value = "/surveyMngr/xml", method = RequestMethod.GET)
     public String addSurveyFromXmlPage( Model model) {
         
         logger.info("show xml import page");
@@ -44,7 +50,7 @@ public class SurveyManagerController {
         return "xmlSurveyImport";
     }
     
-    @RequestMapping(value = "/xml/add", method = RequestMethod.POST)
+    @RequestMapping(value = "/surveyMngr/xml/add", method = RequestMethod.POST)
     public String addingSurveyFromXml(@RequestParam(value="fileXml", required = false) MultipartFile files) {
         
         logger.info("posting xml survey file");
@@ -62,6 +68,7 @@ public class SurveyManagerController {
             
         }
         
-        return "redirect:/xml";
+        return "redirect:/surveyMngr";
     }
 }
+

@@ -5,6 +5,7 @@ import java.util.List;
 import javax.sql.DataSource;
 
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import com.harveynash.surveyapp.dao.QuestionDao;
 import com.harveynash.surveyapp.mapper.QuestionMapper;
@@ -14,7 +15,7 @@ import com.harveynash.surveyapp.model.QuestionOption;
 import com.harveynash.surveyapp.model.QuestionType;
 import com.harveynash.surveyapp.model.User;
 
-
+@Repository
 public class QuestionDaoImpl implements QuestionDao{
 	private DataSource dataSource;
 	private JdbcTemplate jdbcTemplateObject;
