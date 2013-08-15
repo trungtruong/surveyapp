@@ -28,6 +28,11 @@ public interface SurveyDao {
 	    * This is the method to be used to list down
 	    * all the records from the Survey table.
 	    */
+	   public Integer getSurveyId(String surveyName, Date startDate, Date endDate);
+	   /** 
+	    * This is the method to be used to list down
+	    * all the records from the Survey table.
+	    */
 	   public List<Survey> listSurveys();
 	   /** 
 	    * This is the method to be used to delete

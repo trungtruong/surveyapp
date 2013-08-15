@@ -21,8 +21,8 @@ public class UserManagerImpl implements UserManager {
 	}
 
 	@Override
-	public void createUser(User user) {
-		userDao.create(user.getEmail(), user.getFirstName(), user.getLastName());		
+	public void createUser(User user, Integer surveyId) {
+		userDao.create(user.getEmail(), user.getFirstName(), user.getLastName(),surveyId);		
 	}
 
 	@Override

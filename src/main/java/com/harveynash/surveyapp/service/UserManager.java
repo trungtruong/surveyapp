@@ -6,7 +6,7 @@ import com.harveynash.surveyapp.model.User;
 
 public interface UserManager {
 	public List<User> getUserList(Integer surveyId);
-	public void createUser(User user);
+	public void createUser(User user, Integer surveyId);
 	public User getUserByUserId(Integer userId);
 
 }

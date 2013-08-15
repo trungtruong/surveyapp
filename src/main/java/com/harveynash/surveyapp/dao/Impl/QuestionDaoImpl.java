@@ -29,9 +29,9 @@ public class QuestionDaoImpl implements QuestionDao{
 
 	@Override
 	public void create(String questionText, QuestionType questionType,
-			QuestionOption questionOption) {
-		String SQL = "insert into Question (questionText, QuestionType) values (?, ?)";
-		jdbcTemplateObject.update(SQL,questionText,questionType);
+			QuestionOption questionOption, Integer surveyId) {
+		String SQL = "insert into Question (questionText, questionType, surveyId) values (?, ?, ?)";
+		jdbcTemplateObject.update(SQL,questionText,questionType, surveyId);
 		return;	
 		
 	}

@@ -19,7 +19,7 @@ public interface QuestionDao {
 	    * This is the method to be used to create
 	    * a record in the Question table.
 	    */
-	   public void create(String questionText, QuestionType questionType, QuestionOption questionOption);
+	   public void create(String questionText, QuestionType questionType, QuestionOption questionOption, Integer surveyId);
 	   /** 
 	    * This is the method to be used to list down
 	    * a record from the User table corresponding

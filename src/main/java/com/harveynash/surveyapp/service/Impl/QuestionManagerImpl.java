@@ -21,8 +21,8 @@ public class QuestionManagerImpl implements QuestionManager {
 	}
 
 	@Override
-	public void createQuestion(Question question) {
-		questionDao.create(question.getQuestionText(), question.getQuestionType(), question.getQuestionOption());
+	public void createQuestion(Question question, Integer surveyId) {
+		questionDao.create(question.getQuestionText(), question.getQuestionType(), question.getQuestionOption(), surveyId);
 		
 	}
 
