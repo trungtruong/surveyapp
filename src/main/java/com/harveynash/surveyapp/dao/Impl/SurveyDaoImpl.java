@@ -60,4 +60,11 @@ public class SurveyDaoImpl implements SurveyDao {
 
 	}
 
+	@Override
+	public Integer getSurveyId(String surveyName, Date startDate, Date endDate) {
+		String SQL = "select surveyId from Survey where surveyName = ?, startDate = ?, endDate = ?";
+		Integer surveyId = jdbcTemplateObject.queryForInt(SQL, new Object[] {surveyName, startDate, endDate});
+		return surveyId;
+	}
+
 }

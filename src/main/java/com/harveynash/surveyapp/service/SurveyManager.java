@@ -7,4 +7,5 @@ import com.harveynash.surveyapp.model.Survey;
 public interface SurveyManager {
     public List<Survey> getSurveyList();
     public Survey getSurveyDetail(Integer surveyId);
+    public void createSurvey(Survey survey);
 }

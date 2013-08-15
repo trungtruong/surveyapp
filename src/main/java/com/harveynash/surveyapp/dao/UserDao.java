@@ -17,7 +17,7 @@ public interface UserDao {
 	    * This is the method to be used to create
 	    * a record in the User table.
 	    */
-	   public void create(String email, String firstName, String lastName);
+	   public void create(String email, String firstName, String lastName, Integer surveyId);
 	   /** 
 	    * This is the method to be used to list down
 	    * a record from the User table corresponding

@@ -22,9 +22,9 @@ public class UserDaoImpl implements UserDao{
 	}
 
 	@Override
-	public void create(String email, String firstName, String lastName) {
-		String SQL = "insert into User_Survey (email, firstName, lastName) values (?, ?, ?)";
-		jdbcTemplateObject.update(SQL,email,firstName,lastName);
+	public void create(String email, String firstName, String lastName, Integer surveyId) {
+		String SQL = "insert into User_Survey (email, firstName, lastName, surveyId) values (?, ?, ?, ?)";
+		jdbcTemplateObject.update(SQL,email,firstName,lastName,surveyId);
 		return;		
 	}
 
