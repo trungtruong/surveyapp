@@ -9,14 +9,30 @@
 </head>
 <body>
    <table>
-      <c:forEach items="${surveylist}" var="survey">
+      <thead>
          <tr>
-            <td>${survey.surveyId}</td>
-            <td>${survey.surveyName}</td>
-            <td>${survey.startDate}</td>
-            <td>${survey.endDate}</td>
+            <td>Survey ID</td>
+            <td>Survey Name</td>
+            <td>Start Date</td>
+            <td>End Date</td>
+            <td>Select</td>
          </tr>
-    </c:forEach>
+      </thead>
+      <tbody>
+         <c:forEach items="${surveylist}" var="survey">
+            <tr>
+               <td>${survey.surveyId}</td>
+               <td>${survey.surveyName}</td>
+               <td>${survey.startDate}</td>
+               <td>${survey.endDate}</td>
+               <td><input type="checkbox" name="checkboxgroup"/></td>
+            </tr>
+         </c:forEach>
+      </tbody>
    </table>
+   <input type="button" name="btnAdd" onclick="location.href='/surveyapp/surveyMngr/addSurvey'" value="Add"/>
+   <input type="button" value="Edit"/>
+   <input type="button" value="Delete"/>
+   <input type="button" value="Send"/>
 </body>
 </html>
