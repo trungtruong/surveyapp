@@ -30,7 +30,7 @@
          </c:forEach>
       </tbody>
    </table>
-   <input type="button" name="btnAdd" onclick="location.href='/surveyapp/surveyMngr/addSurvey'" value="Add"/>
+   <input type="button" name="btnAdd" onclick="location.href='/surveyapp/surveyMngr/surveyAdd'" value="Add"/>
    <input type="button" value="Edit"/>
    <input type="button" value="Delete"/>
    <input type="button" value="Send"/>

@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -36,12 +37,16 @@ public class SurveyManagerController {
         return "surveyMngr";
     }
     
-    @RequestMapping(value = "/surveyMngr/addSurvey", method = RequestMethod.GET)
-    public String addSurvey(Model model) {
-        logger.info("adding survey");
+    @RequestMapping(value = "/surveyMngr/surveyAdd", method = RequestMethod.GET)
+    public String surveyAddingForm(Model model) {
+        logger.info("survey add form");
         return "addSurvey";
     }
-    
+    @RequestMapping(value = "/surveyMngr/add", method = RequestMethod.POST)
+    public String addSurveyPost(@ModelAttribute("survey") Survey survey) {
+        logger.info("adding survey");
+        return "redirect:/surveyMngr";
+    }
     @RequestMapping(value = "/surveyMngr/xml", method = RequestMethod.GET)
     public String addSurveyFromXmlPage( Model model) {
         

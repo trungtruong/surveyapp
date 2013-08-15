@@ -7,13 +7,19 @@
 <title>Insert title here</title>
 </head>
 <body>
-<label>Survey Name: </label><input type="text" /><br/>
-<label>Start Date:</label><input type="text"/><br/>
+<form action="/surveyMngr/add" 
+      method="post" 
+      modelAttribute="survey">
+<label>Survey Name: </label><input type="text" path="surveyName"/><br/>
+<label>Start Date:</label><input type="tyext"/><br/>
 <label>End Date:</label><input type="text"/><br/>
 <label>Questions:</label><input type="button" value="Add"/>
    <input type="button" value="Add question from xml"/>
    <br/>
 <label>Send to these email:</label><input type="text"/><br/>
-<input type="button" value="Add survey from xml" onclick="location.href='/surveyapp/surveyMngr/xml'"/> 
+<input type="button" value="Add survey from xml" onclick="location.href='/surveyapp/surveyMngr/xml'"/><br/>
+<input type="submit" value="Apply"/> 
+<input type="button" value="Cancel" onclick="location.href='/surveyapp/surveyMngr'"/>
+</form>
 </body>
 </html>
