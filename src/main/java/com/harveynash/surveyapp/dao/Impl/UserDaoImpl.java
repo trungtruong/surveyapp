@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -13,6 +14,8 @@ import com.harveynash.surveyapp.model.User;
 
 @Repository
 public class UserDaoImpl implements UserDao{
+    
+    @Autowired
 	private DataSource dataSource;
 	private JdbcTemplate jdbcTemplateObject;
 

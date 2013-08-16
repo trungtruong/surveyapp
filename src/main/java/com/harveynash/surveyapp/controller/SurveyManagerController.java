@@ -47,6 +47,13 @@ public class SurveyManagerController {
         logger.info("adding survey");
         return "redirect:/surveyMngr";
     }
+    
+    @RequestMapping(value = "/surveyMngr/surveyDel", method = RequestMethod.GET)
+    public String surveyDeleting(Model model) {
+        logger.info("survey deleting");
+        
+        return "redirect:/surveyMngr";
+    }
     @RequestMapping(value = "/surveyMngr/xml", method = RequestMethod.GET)
     public String addSurveyFromXmlPage( Model model) {
         

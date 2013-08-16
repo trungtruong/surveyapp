@@ -17,18 +17,13 @@ public interface SurveyDao {
 	    * This is the method to be used to create
 	    * a record in the Survey table.
 	    */
-	   public void create(String surveyName, Date startDate, Date endDate);
+	   public int create(String surveyName, Date startDate, Date endDate);
 	   /** 
 	    * This is the method to be used to list down
 	    * a record from the Survey table corresponding
 	    * to a passed Survey id.
 	    */
 	   public Survey getSurvey(Integer surveyId);
-	   /** 
-	    * This is the method to be used to list down
-	    * all the records from the Survey table.
-	    */
-	   public Integer getSurveyId(String surveyName, Date startDate, Date endDate);
 	   /** 
 	    * This is the method to be used to list down
 	    * all the records from the Survey table.

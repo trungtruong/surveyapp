@@ -20,6 +20,7 @@ public class Survey {
     @XmlTransient
     private int surveyId;
 
+    @XmlElement(name ="surveyName")
     private String surveyName;
     
     @XmlElement(name ="question")

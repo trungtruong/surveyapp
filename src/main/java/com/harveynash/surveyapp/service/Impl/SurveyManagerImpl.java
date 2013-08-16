@@ -18,7 +18,11 @@ public class SurveyManagerImpl implements SurveyManager {
     
     @Autowired
     private SurveyDao surveyDao;
+    
+    @Autowired
     private UserManager userManager;
+    
+    @Autowired
     private QuestionManager questionManager;
 
     @Override
@@ -47,17 +51,16 @@ public class SurveyManagerImpl implements SurveyManager {
 		List<User> users= survey.getUserList();
 		
 		// Create Survey
-		surveyDao.create(survey.getSurveyName(), survey.getStartDate(), survey.getEndDate());
-		survey.setSurveyId(surveyDao.getSurveyId(survey.getSurveyName(), survey.getStartDate(), survey.getEndDate()));
+	    int surveyId = surveyDao.create(survey.getSurveyName(), survey.getStartDate(), survey.getEndDate());
 		
 		//Create Question for Survey
 		for(Question question : questions) {
-			questionManager.createQuestion(question, survey.getSurveyId());
+			questionManager.createQuestion(question, surveyId);
 		}
 		
 		////Create User for Survey
 		for(User user : users) {
-			userManager.createUser(user, survey.getSurveyId());
+			userManager.createUser(user, surveyId);
 		}
 		
 	}

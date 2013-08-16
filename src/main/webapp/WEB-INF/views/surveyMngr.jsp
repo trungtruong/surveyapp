@@ -32,7 +32,7 @@
    </table>
    <input type="button" name="btnAdd" onclick="location.href='/surveyapp/surveyMngr/surveyAdd'" value="Add"/>
    <input type="button" value="Edit"/>
-   <input type="button" value="Delete"/>
+   <input type="button" value="Delete" onclick="location.href='/surveyapp/surveyMngr/surveyDel'"/>
    <input type="button" value="Send"/>
 </body>
 </html>
