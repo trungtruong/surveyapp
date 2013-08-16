@@ -2,13 +2,16 @@ package com.harveynash.surveyapp.model;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.sql.Date;
+import java.util.Date;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+import com.harveynash.surveyapp.adapter.DateAdapter;
 
 @XmlRootElement (name = "survey")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -25,6 +28,14 @@ public class Survey {
     @XmlElement(name ="user")
     private List<User> userList;
 
+    @XmlElement(name ="startDate")
+    @XmlJavaTypeAdapter(DateAdapter.class)
+    private Date startDate;
+    
+    @XmlElement(name ="endDate")
+    @XmlJavaTypeAdapter(DateAdapter.class)
+    private Date endDate;
+
     public List<User> getUserList() {
 		return userList;
 	}
@@ -32,10 +43,6 @@ public class Survey {
 		this.userList = userList;
 	}
 
-	private Date startDate;
-
-    private Date endDate;
-    
     public Integer getSurveyId() {
         return surveyId;
     }

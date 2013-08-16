@@ -70,8 +70,9 @@ public class SurveyManagerController {
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
-            
         }
+        
+        surveyManager.createSurvey(survey);
         
         return "redirect:/surveyMngr";
     }
