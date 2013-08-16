@@ -29,6 +29,11 @@ public class UserManagerImpl implements UserManager {
 	public User getUserByUserId(Integer userId) {
 		return userDao.getUser(userId);
 	}
+
+	@Override
+	public void deleteUserBySurveyId(Integer surveyId) {
+		userDao.delete(surveyId);
+	}
 	
 
 }

@@ -54,9 +54,9 @@ public class QuestionDaoImpl implements QuestionDao{
 	}
 
 	@Override
-	public void delete(Integer questionId) {
-		String SQL = "delete from Question where questionId = ?";
-	     jdbcTemplateObject.update(SQL, questionId);
+	public void delete(Integer surveyId) {
+		String SQL = "delete from Question where surveyId = ?";
+	     jdbcTemplateObject.update(SQL, surveyId);
 	     return;
 		
 	}

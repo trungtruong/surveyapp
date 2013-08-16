@@ -8,5 +8,6 @@ public interface UserManager {
 	public List<User> getUserList(Integer surveyId);
 	public void createUser(User user, Integer surveyId);
 	public User getUserByUserId(Integer userId);
+	public void deleteUserBySurveyId(Integer surveyId);
 
 }

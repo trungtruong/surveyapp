@@ -31,4 +31,9 @@ public class QuestionManagerImpl implements QuestionManager {
 		return questionDao.getQuestion(questionId);
 	}
 
+	@Override
+	public void deleteQuestionBySurveyId(Integer surveyId) {
+		questionDao.delete(surveyId);
+	}
+
 }

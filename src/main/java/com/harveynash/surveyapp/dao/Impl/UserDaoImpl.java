@@ -48,9 +48,9 @@ public class UserDaoImpl implements UserDao{
 	}
 
 	@Override
-	public void delete(Integer userId) {
-		 String SQL = "delete from User_Survey where userId = ?";
-	     jdbcTemplateObject.update(SQL, userId);
+	public void delete(Integer surveyId) {
+		 String SQL = "delete from User_Survey where surveyId = ?";
+	     jdbcTemplateObject.update(SQL, surveyId);
 	     return;
 	}
 

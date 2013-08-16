@@ -34,7 +34,7 @@ public interface UserDao {
 	    * a record from the User table corresponding
 	    * to a passed User id.
 	    */
-	   public void delete(Integer userId);
+	   public void delete(Integer surveyId);
 	   /** 
 	    * This is the method to be used to update
 	    * a record into the User table.

@@ -36,7 +36,7 @@ public interface QuestionDao {
 	    * a record from the Question table corresponding
 	    * to a passed Question id.
 	    */
-	   public void delete(Integer questionId);
+	   public void delete(Integer surveyId);
 	   /** 
 	    * This is the method to be used to update
 	    * a record into the Question table.

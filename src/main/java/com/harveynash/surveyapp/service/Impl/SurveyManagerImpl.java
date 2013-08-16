@@ -65,4 +65,11 @@ public class SurveyManagerImpl implements SurveyManager {
 		
 	}
 
+	@Override
+	public void deleteSurvey(Integer surveyId) {
+		userManager.deleteUserBySurveyId(surveyId);
+		questionManager.deleteQuestionBySurveyId(surveyId);
+		surveyDao.delete(surveyId);
+	}
+
 }
